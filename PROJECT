@@ -1,0 +1,18 @@
+domain: demo.cmit.com
+layout: go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: demo
+repo: cmit.com/crd/demo
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: demo.cmit.com
+  group: demo-system
+  kind: Demo
+  path: cmit.com/crd/demo/api/v1alpha1
+  version: v1alpha1
+version: "3"
